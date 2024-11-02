@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial de React </title>
+    <link rel="stylesheet" href="styles.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery CDN -->
+    <script src="script.js" ></script>
+</head>
+<body>
+    <header>
+	        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React Logo" style="height: 40px; vertical-align: middle;">
+
+        <h1>Tutorial de React UNIR Grupo C </h1>
+        <nav>
+            <ul>
+                <li><a href="#justificacion">Justificación</a></li>
+                <li><a href="#instalacion">Instalación</a></li>
+                <li><a href="#primeros-pasos">Primeros Pasos</a></li>
+                <li><a href="#utilizacion">Utilización</a></li>
+                <li><a href="#funcionamiento">Funcionamiento</a></li>
+                <li><a href="#conclusiones">Conclusiones</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="justificacion">
+            <h2>Justificación del Framework</h2>
+            <p>React es una biblioteca de JavaScript desarrollada por Facebook para facilitar la creación de interfaces de usuario dinámicas y complejas. Se enfoca en el desarrollo de aplicaciones web de una sola página (SPA), permitiendo que los desarrolladores creen aplicaciones rápidas y eficientes.</p>
+            <h3>¿Para qué sirve?</h3>
+            <p>React permite a los desarrolladores construir componentes reutilizables que manejan su propio estado. Esto facilita la gestión de la interfaz de usuario, ya que los cambios en el estado de un componente se reflejan automáticamente en la vista, sin necesidad de manipular directamente el DOM.</p>
+            <h3>¿Qué aplicaciones tiene?</h3>
+            <p>React se utiliza en una variedad de aplicaciones, desde simples sitios web hasta aplicaciones complejas y escalables. Algunas aplicaciones notables que utilizan React incluyen:</p>
+            <ul>
+                <li>Facebook: La plataforma principal está construida con React.</li>
+                <li>Instagram: La interfaz está basada en componentes de React.</li>
+                <li>WhatsApp Web: Utiliza React para su interfaz de usuario.</li>
+            </ul>
+            <h3>¿Sobre qué lenguajes se apoya?</h3>
+            <p>React se basa en JavaScript, y es especialmente efectivo cuando se utiliza junto con HTML y CSS. Utiliza JSX, una extensión de sintaxis que permite escribir HTML dentro de JavaScript, lo que hace que la estructura de los componentes sea más intuitiva.</p>
+            <h3>¿Qué prerrequisitos necesita?</h3>
+            <p>Antes de comenzar con React, es fundamental tener conocimientos básicos de:</p>
+            <ul>
+                <li>HTML: Para la estructura de la aplicación.</li>
+                <li>CSS: Para el diseño y estilo visual.</li>
+                <li>JavaScript: Para la lógica de programación y manipulación del DOM.</li>
+            </ul>
+        </section>
+
+        <section id="instalacion">
+            <h2>Instalación</h2>
+            <p>Para comenzar a utilizar React, primero necesitas configurar tu entorno de desarrollo. A continuación, se detallan los pasos para la instalación:</p>
+            <h3>¿Se precisa instalación?</h3>
+            <p>Sí, necesitas instalar Node.js y npm (Node Package Manager) para gestionar las dependencias de tu proyecto React.</p>
+            <h3>Pasos para realizar la instalación:</h3>
+            <ol>
+                <li>Visita el sitio web de <a href="https://nodejs.org/">Node.js</a>.</li>
+                <li>Descarga e instala la versión recomendada para tu sistema operativo.</li>
+                <li>Verifica la instalación abriendo tu terminal y ejecutando:
+                    <code>node -v</code> y <code>npm -v</code> para confirmar que ambas herramientas están correctamente instaladas.
+                </li>
+            </ol>
+            <h3>Crear un nuevo proyecto de React:</h3>
+            <ol>
+                <li>Usa el siguiente comando en la terminal para crear un nuevo proyecto:
+                    <code>npx create-react-app mi-app</code>.
+                </li>
+                <li>Accede al directorio del nuevo proyecto:
+                    <code>cd mi-app</code>.
+                </li>
+                <li>Inicia la aplicación:
+                    <code>npm start</code>.
+                </li>
+            </ol>
+            <h3>Versiones necesarias:</h3>
+            <p>Asegúrate de que estás utilizando la última versión estable de Node.js y npm. React generalmente es compatible con las versiones más recientes.</p>
+            <h3>Variables de entorno:</h3>
+            <p>Es posible que desees configurar algunas variables de entorno para tu aplicación, como la configuración de la API o las claves de acceso, que puedes hacer en un archivo <code>.env</code>.</p>
+            <h3>¿Necesita base de datos?</h3>
+            <p>React por sí mismo no necesita una base de datos, pero puedes conectarlo a cualquier API o base de datos que desees usar. Por ejemplo, puedes usar Firebase, MongoDB, o REST APIs para gestionar los datos.</p>
+        </section>
+
+        <section id="primeros-pasos">
+            <h2>Primeros Pasos</h2>
+            <p>Ahora que has configurado tu entorno, es hora de crear tu primer componente en React.</p>
+            <h3>Crear el componente “Hola Mundo”</h3>
+            <p>Abre el archivo <code>src/App.js</code> y reemplaza su contenido por el siguiente código:</p>
+            <pre>
+                <code>
+                    import React from 'react';
+                    
+                    function App() {
+                        return &lt;h1&gt;Hola Mundo&lt;/h1&gt;;
+                    }
+
+                    export default App;
+                </code>
+            </pre>
+            <p>Guarda el archivo y vuelve a tu navegador. Deberías ver “Hola Mundo” en la pantalla. Este es un ejemplo básico de un componente funcional en React.</p>
+            <h3>Comprobación de la aplicación</h3>
+            <p>React utiliza un sistema de recarga en caliente, lo que significa que cada vez que guardas tus cambios, el navegador se actualiza automáticamente para mostrar los nuevos resultados. Esto hace que el desarrollo sea más rápido y eficiente.</p>
+        </section>
+
+        <section id="utilizacion">
+            <h2>Utilización del Framework</h2>
+            <p>Para crear una aplicación más completa, es importante entender cómo estructurar y gestionar los componentes en React.</p>
+            <h3>Creación de un Componente Básico</h3>
+            <p>Los componentes en React pueden ser funcionales o basados en clases. Aquí te muestro cómo crear un componente funcional:</p>
+            <pre>
+                <code>
+                    import React from 'react';
+
+                    function MiComponente() {
+                        return &lt;div&gt;Este es un componente reutilizable&lt;/div&gt;;
+                    }
+
+                    export default MiComponente;
+                </code>
+            </pre>
+            <p>Para utilizar este componente en <code>App.js</code>, debes importarlo y usarlo dentro del método de renderizado:</p>
+            <pre>
+                <code>
+                    import React from 'react';
+                    import MiComponente from './MiComponente';
+
+                    function App() {
+                        return (
+                            &lt;div&gt;
+                                &lt;h1&gt;Hola Mundo&lt;/h1&gt;
+                                &lt;MiComponente /&gt;
+                            &lt;/div&gt;
+                        );
+                    }
+
+                    export default App;
+                </code>
+            </pre>
+            <h3>Visualización de Resultados</h3>
+            <p>Al realizar estos cambios y guardar, deberías ver el texto de “Hola Mundo” junto con el mensaje de “Este es un componente reutilizable” en la pantalla. Así es como puedes construir una interfaz de usuario en React utilizando múltiples componentes.</p>
+        </section>
+
+        <section id="funcionamiento">
+            <h2>Explicación del Funcionamiento</h2>
+            <p>React utiliza un DOM virtual para optimizar el rendimiento. En lugar de interactuar directamente con el DOM real, React crea una representación en memoria de la UI y sólo actualiza las partes del DOM que han cambiado.</p>
+            <h3>¿Cómo actúa sobre páginas y componentes?</h3>
+            <p>React organiza tu aplicación en componentes. Cada componente puede manejar su propio estado y ciclo de vida. Esto permite que los desarrolladores construyan aplicaciones de forma más modular y escalable.</p>
+            <h3>Modificación de Componentes</h3>
+            <p>Para editar o modificar un componente, simplemente accede al archivo correspondiente en la carpeta <code>src</code>. Por ejemplo, si deseas cambiar el contenido del componente <code>MiComponente</code>, edítalo así:</p>
+            <pre>
+                <code>
+                    function MiComponente() {
+                        return &lt;div&gt;Contenido actualizado del Componente&lt;/div&gt;;
+                    }
+                </code>
+            </pre>
+            <p>Los cambios se reflejarán automáticamente en la aplicación en ejecución.</p>
+            <h3>Referencia de Archivos entre Componentes</h3>
+            <p>Los componentes se pueden referenciar mediante importaciones. Puedes crear una jerarquía de componentes y pasar datos entre ellos utilizando props.</p>
+        </section>
+
+        <section id="conclusiones">
+            <h2>Conclusiones</h2>
+            <p>Este tutorial proporciona una introducción completa a React, cubriendo desde la instalación hasta la creación de componentes y su funcionamiento. React es una herramienta poderosa que mejora la experiencia de desarrollo de aplicaciones web, permitiendo un enfoque modular y basado en componentes.</p>
+            <p>Al finalizar este tutorial, deberías estar en condiciones de:</p>
+            <ul>
+                <li>Instalar y configurar un entorno de desarrollo React.</li>
+                <li>Crear y gestionar componentes en una aplicación React.</li>
+                <li>Comprender el ciclo de vida de un componente y cómo se actualiza el DOM virtual.</li>
+                <li>Implementar y reutilizar componentes en diferentes partes de tu aplicación.</li>
+            </ul>
+            <p>Con esta base, puedes profundizar en temas más avanzados como el manejo del estado con Hooks, la gestión de rutas con React Router, y el uso de Context API para el manejo global del estado.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tutorial de React. Todos los derechos reservados. Grupo C</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

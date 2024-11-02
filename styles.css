@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #007bff;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    opacity: 0.8; /* Optional: slight fade effect */
+}
+
+main {
+    padding: 20px;
+}
+
+h2 {
+    color: #333;
+    margin-top: 20px;
+    border-bottom: 2px solid #007bff; /* Underline for section headers */
+    padding-bottom: 5px;
+}
+
+h3 {
+    color: #555;
+    margin-top: 15px;
+    border-left: 4px solid #007bff; /* Accent line for subheadings */
+    padding-left: 10px;
+}
+
+pre {
+    background: #f8f9fa; /* Lighter background */
+    padding: 10px;
+    border-radius: 5px;
+    border-left: 4px solid #007bff; /* Accent border */
+    overflow-x: auto; /* Allow scrolling for long lines */
+}
+
+p {
+    margin: 10px 0;
+    color: #666; /* Slightly lighter text color */
+}
+
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+/* Button styles (if needed in the future) */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+pre {
+    background: #f8f9fa; /* Lighter background */
+    padding: 10px;
+    border-radius: 5px;
+    border-left: 4px solid #007bff; /* Accent border */
+    overflow-x: auto; /* Allow scrolling for long lines */
+    text-align: left; /* Align text to the left */
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace; /* Optional: use a monospace font for code */
+}
+
+header img {
+    height: 40px; /* Set the desired height */
+    vertical-align: middle; /* Aligns the image vertically */
+    margin-right: 10px; /* Space between logo and title */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #007bff;
+    color: #fff; /* Changed to white */
+    margin-top: 20px; /* Add margin for separation */
+    
+}
+
+
+button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #007bff;
+    color: #fff; /* Changed to white */
+    margin-top: 20px; /* Add margin for separation */
+    
+}
+
+nav a.active {
+    border-bottom: 2px solid #fff; /* Active link style */
+}
+
+h2 {
+    transition: transform 0.5s, opacity 0.5s; /* Smooth animation */
+    opacity: 0; /* Start hidden */
+    transform: translateY(20px); /* Start slightly below */
+}
+
